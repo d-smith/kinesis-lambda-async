@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >
+  Create a queue to feed a lambda from
+Resources:
+
+  K2:
+    Type: AWS::Kinesis::Stream
+    Properties:
+      Name: K2Stream
+      ShardCount: 1
+
+Outputs:
+  K2Arn:
+    Value: !GetAtt K2.Arn
+    Export:
+      Name: K2StreamArn

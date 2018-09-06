@@ -1,0 +1,16 @@
+{
+  "name": "kinesis-lambda-async",
+  "version": "1.0.0",
+  "description": "Simple kinesis serverless example",
+  "main": "k2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "aws-sdk": "^2.309.0",
+    "proxy-agent": "^3.0.1",
+    "serverless-pseudo-parameters": "^2.2.0"
+  }
+}
