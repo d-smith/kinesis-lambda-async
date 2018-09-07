@@ -15,7 +15,6 @@ provider:
 functions:
   hello:
     handler: k2.doIt
-    batchSize: 100
     environment:
       DOWNSTREAM_FN_NAME: "${self:service}-${self:provider.stage}-processRecord"
     events:
@@ -25,6 +24,7 @@ functions:
             Fn::GetAtt:
               - K2
               - Arn
+          batchSize: 100
   processRecord:
     handler: k2.doRecord
     reservedConcurrency: 3
